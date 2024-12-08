@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7e9;
+    color: #333; /* Metin rengi koyu gri */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-column {
+    background-color: #ccffcc;
+    width: 50%;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.right-column {
+    background-color: #b3ffb3;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2.5em; /* Başlık boyutunu artırdık */
+    font-weight: bold;
+    color: #2c6e49; /* Başlıklar için daha koyu yeşil */
+}
+
+h2 {
+    font-size: 1.8em; /* Alt başlıklar için de font büyüklüğünü artırdık */
+    font-weight: bold;
+    color: #2c6e49;
+}
+
+p {
+    font-size: 1.1em; /* Metinleri biraz daha büyük yaparak okunabilirliği artırdık */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a5d3a; /* Linkler için daha koyu renk */
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 20px;
+    display: none;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px; /* Butonun dikey boyutunu artırdık */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 90%; /* Butonlar biraz daha geniş */
+    text-align: center;
+    border-radius: 5px; /* Butonları yuvarlak köşeli yapabiliriz */
+    transition: all 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Hover efektiyle buton boyutunu biraz büyütüyoruz */
+}
+
+button:focus {
+    outline: none; /* Buton tıklandığında odak çizgisini kaldırır */
+}
+
+section#toplamAtik {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Kolonları üst üste yerleştir */
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Kolonları %100 genişlikte yap */
+        padding: 15px; /* Padding'i azaltarak daha kompakt hale getirebiliriz */
+    }
+
+    button {
+        width: 100%; /* Butonları mobilde %100 genişlikte yap */
+        padding: 12px 20px; /* Butonların boyutunu küçültelim */
+    }
+}
