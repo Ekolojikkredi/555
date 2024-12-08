@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <header>
+                <img src="images/logo.png" alt="Ekolojik Kredi Logo" class="logo">
+                <h1>Ekolojik Kredi</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('geriDonusumNedir')">Geri Dönüşüm Nedir?</a></li>
+                    <li><a href="#" onclick="showSection('hazirlayanlar')">Hazırlayanlar</a></li>
+                    <li><a href="#" onclick="showSection('ekolojikKrediNedir')">Ekolojik Kredi Nedir?</a></li>
+                    <li><a href="#" onclick="showSection('bizeUlasin')">Bize Ulaşın</a></li>
+                </ul>
+            </nav>
+            <section id="geriDonusumNedir" class="section" aria-labelledby="geriDonusumNedir">
+                <h2>Geri Dönüşüm Nedir?</h2>
+                <p>Geri dönüşüm, atıkların yeniden işlenip kullanılabilir hale getirilmesi sürecidir. Bu süreç, doğal kaynakları korur ve çevreye olan etkileri azaltır. Türkiye'de geri dönüşüm oranları her geçen yıl artmaktadır.</p>
+            </section>
+            <section id="hazirlayanlar" class="section" aria-labelledby="hazirlayanlar">
+                <h2>Hazırlayanlar</h2>
+                <p>Danışman: Osman Onuk</p>
+                <p>Öğrenciler: Muhammedcan Arslanparçası, Bilal Yiğit Tezcan, Yağız Efe Yılmaz</p>
+            </section>
+            <section id="ekolojikKrediNedir" class="section" aria-labelledby="ekolojikKrediNedir">
+                <h2>Ekolojik Kredi Nedir?</h2>
+                <p>Ekolojik Kredi Projesi, çevre bilincini artırmak ve okullarda geri dönüşüm kültürünü geliştirmek amacıyla oluşturulmuştur. Öğrenciler, çevre dostu alışkanlıkları teşvik etmek için bu projeye katılabilirler.</p>
+            </section>
+            <section id="bizeUlasin" class="section" aria-labelledby="bizeUlasin">
+                <h2>Bize Ulaşın</h2>
+                <p>E-posta: ekolojikkreditubitak@gmail.com</p>
+                <p>Adres: Torbalı Anadolu Lisesi</p>
+            </section>
+            <section id="toplamAtik" aria-labelledby="toplamAtik">
+                <h2>Toplam Atık Sayacı</h2>
+                <p>Toplam atık kilogramı: <span id="toplam-atik-kilogrami">0</span> kg</p>
+            </section>
+        </div>
+        <div class="right-column">
+            <button onclick="showSection('kayit')" class="oval-btn">Kayıt Ol</button>
+            <button onclick="showSection('veriGirisi')" class="oval-btn">Veri Girişi</button>
+            <button onclick="showSection('veriGorme')" class="oval-btn">Veri Görme</button>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // Tüm section'ları gizle
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // İlgili section'ı göster
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        // Sayfa yüklendiğinde, ilk section'ı göster
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('geriDonusumNedir');
+        });
+    </script>
+</body>
+</html>
